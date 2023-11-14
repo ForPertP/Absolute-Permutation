@@ -1,4 +1,19 @@
-// Absolute Permutation
+#include <bits/stdc++.h>
+
+using namespace std;
+
+string ltrim(const string &);
+string rtrim(const string &);
+vector<string> split(const string &);
+
+/*
+ * Complete the 'absolutePermutation' function below.
+ *
+ * The function is expected to return an INTEGER_ARRAY.
+ * The function accepts following parameters:
+ *  1. INTEGER n
+ *  2. INTEGER k
+ */
 
 vector<int> absolutePermutation(int n, int k)
 {

@@ -15,8 +15,12 @@ vector<string> split(const string &);
  *  2. INTEGER k
  */
 
+
 vector<int> absolutePermutation(int n, int k)
 {
+}
+
+vector<int> absolutePermutation2(int n, int k) {
     vector<int> result;
 
     if (k != 0)
@@ -142,4 +146,3 @@ vector<string> split(const string &str) {
 
     return tokens;
 }
-

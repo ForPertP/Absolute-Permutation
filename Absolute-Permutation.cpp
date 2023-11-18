@@ -18,6 +18,33 @@ vector<string> split(const string &);
 
 vector<int> absolutePermutation(int n, int k)
 {
+    vector<int> result;
+
+    if (k == 0)
+    {
+        for (int i = 1; i <= n; ++i)
+        {
+            result.emplace_back(i);
+        }
+    }
+    else if (n % 2 == 0 && n % (k * 2) == 0)
+    {
+        for (int i = 1, j = 1; i <= n; ++i)
+        {
+            result.emplace_back((j++ <= k) ? i + k : i - k);
+
+            if (j > k * 2)
+            {
+                j = 1;
+            }
+        }
+    }
+    else
+    {
+        result.emplace_back(-1);
+    }
+
+    return result;
 }
 
 vector<int> absolutePermutation2(int n, int k) {

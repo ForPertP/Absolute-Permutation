@@ -14,8 +14,48 @@ using System;
 
 class Result
 {
-}
 
+    /*
+     * Complete the 'absolutePermutation' function below.
+     *
+     * The function is expected to return an INTEGER_ARRAY.
+     * The function accepts following parameters:
+     *  1. INTEGER n
+     *  2. INTEGER k
+     */
+
+    public static List<int> absolutePermutation(int n, int k)
+    {
+       List<int> result = new List<int>();
+
+        if (k == 0)
+        {
+            for (int i = 1; i <= n; ++i)
+            {
+                result.Add(i);
+            }
+        }
+        else if (n % 2 == 0 && n % (k * 2) == 0)
+        {
+            for (int i = 1, j = 1; i <= n; ++i)
+            {
+                result.Add((j++ <= k) ? i + k : i - k);
+
+                if (j > k * 2)
+                {
+                    j = 1;
+                }
+            }
+        }
+        else
+        {
+            result.Add(-1);
+        }
+
+        return result;
+    }
+
+}
 
 class Solution
 {

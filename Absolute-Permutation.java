@@ -11,9 +11,20 @@ import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
 class Result {
-  public static List<Integer> absolutePermutation(int n, int k) {
-    
-  }
+
+    /*
+     * Complete the 'absolutePermutation' function below.
+     *
+     * The function is expected to return an INTEGER_ARRAY.
+     * The function accepts following parameters:
+     *  1. INTEGER n
+     *  2. INTEGER k
+     */
+
+    public static List<Integer> absolutePermutation(int n, int k) {
+    // Write your code here
+    }
+
 }
 
 public class Solution {

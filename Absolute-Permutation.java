@@ -23,6 +23,25 @@ class Result {
 
     public static List<Integer> absolutePermutation(int n, int k) {
     // Write your code here
+        List<Integer> result = new ArrayList<>();
+
+        if (k == 0) {
+            for (int i = 1; i <= n; ++i) {
+                result.add(i);
+            }
+        } else if (n % 2 == 0 && n % (k * 2) == 0) {
+            for (int i = 1, j = 1; i <= n; ++i) {
+                result.add((j++ <= k) ? i + k : i - k);
+
+                if (j > k * 2) {
+                    j = 1;
+                }
+            }
+        } else {
+            result.add(-1);
+        }
+
+        return result;
     }
 
 }

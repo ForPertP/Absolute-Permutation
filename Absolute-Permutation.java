@@ -31,9 +31,9 @@ class Result {
             }
         } else if (n % 2 == 0 && n % (k * 2) == 0) {
             for (int i = 1, j = 1; i <= n; ++i) {
-                result.add((j++ <= k) ? i + k : i - k);
+                result.add((j <= k) ? i + k : i - k);
 
-                if (j > k * 2) {
+                if (++j > k * 2) {
                     j = 1;
                 }
             }

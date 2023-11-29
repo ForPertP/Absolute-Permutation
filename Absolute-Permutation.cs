@@ -39,9 +39,9 @@ class Result
         {
             for (int i = 1, j = 1; i <= n; ++i)
             {
-                result.Add((j++ <= k) ? i + k : i - k);
+                result.Add((j <= k) ? i + k : i - k);
 
-                if (j > k * 2)
+                if (++j > k * 2)
                 {
                     j = 1;
                 }
